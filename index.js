@@ -85,11 +85,11 @@ app.listen(port, () => {
  * @swagger
  * /todo:
  *  get:
- *      summary: To get all task from mongodb
- *      description: this api is  used to fetch data from mongodb
+ *      summary: To get all task from database
+ *      description: this api is  used to fetch data from database
  *      responses:
  *          "200":
- *              description: this api is  used to fetch data from mongodb
+ *              description: this api is  used to fetch data from database
  *              content:
  *                  application/json:
  *                      schema:
@@ -105,8 +105,8 @@ app.listen(port, () => {
  * @swagger
  * /todo/{id}:
  *  get:
- *      summary: To get a particular task from mongodb
- *      description: this api is  used to fetch data from mongodb
+ *      summary: To get a particular task from database
+ *      description: this api is  used to fetch data from database
  *      parameters:
  *        - in: path
  *          name: id
@@ -116,7 +116,7 @@ app.listen(port, () => {
  *            type: string
  *      responses:
  *          "200":
- *              description: this api is  used to fetch data from mongodb
+ *              description: this api is  used to fetch data from database
  *              content:
  *                  application/json:
  *                      schema:
@@ -132,8 +132,8 @@ app.listen(port, () => {
  * @swagger
  * /todo:
  *  post:
- *      summary: used to insert data to mongodb
- *      description: this api is  used to fetch data from mongodb
+ *      summary: To insert task to database
+ *      description: this api is  used to post data to database
  *      requestBody:
  *          requires: true
  *          content:
@@ -152,8 +152,8 @@ app.listen(port, () => {
  * @swagger
  * /todo/{id}:
  *  put:
- *      summary: used to update data to mongodb
- *      description: this api is  used to fetch data from mongodb
+ *      summary: To update task in database
+ *      description: this api is  used to update data from database
  *      parameters:
  *        - in: path
  *          name: id
@@ -186,8 +186,8 @@ app.listen(port, () => {
  * @swagger
  * /todo/{id}:
  *  delete:
- *      summary: To delete a record from mongodb
- *      description: this api is  used to delete data from mongodb
+ *      summary: To delete a record from database
+ *      description: this api is  used to delete data from database
  *      parameters:
  *        - in: path
  *          name: id
