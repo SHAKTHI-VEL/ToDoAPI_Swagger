@@ -1,7 +1,8 @@
 const express = require('express')
+const path = require('path');
 const db=require('./Database/db')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 var cors = require('cors')
 const swaggerJSDoc=require('swagger-jsdoc')
 const swaggerUi=require('swagger-ui-express')
@@ -30,9 +31,9 @@ const swaggerSpec=swaggerJSDoc(options)
 app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
 
 const todo=require('./routes/todo')
 
@@ -75,20 +76,6 @@ app.listen(port, () => {
  *                     type: string
  *                  completed:
  *                     type: boolean
- */
-
-//@description:test 
- 
-/**
- * @swagger
- * /:
- *  get:
- *     summary: This api is used to check if get method is working or not
- *     
- *     responses:
- *         "200":
- *             description: To test Get method
- *       
  */
 
 
