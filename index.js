@@ -2,10 +2,11 @@ const express = require('express')
 const db=require('./Database/db')
 const app = express()
 const port = 3000
+var cors = require('cors')
 const swaggerJSDoc=require('swagger-jsdoc')
 const swaggerUi=require('swagger-ui-express')
 
-
+app.use(cors())
 app.use(express.json())
 db();
 
