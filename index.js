@@ -6,7 +6,10 @@ const port = process.env.PORT || 3000
 var cors = require('cors')
 const swaggerJSDoc=require('swagger-jsdoc')
 const swaggerUi=require('swagger-ui-express')
+var compression = require('compression')
 
+
+app.use(compression())
 app.use(cors())
 app.use(express.json())
 db();
